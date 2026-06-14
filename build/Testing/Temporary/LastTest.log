@@ -1,0 +1,24 @@
+Start testing: Jun 14 20:58 RTZ 2 (çèìà)
+----------------------------------------------------------
+1/1 Testing: all_tests
+1/1 Test: all_tests
+Command: "C:/Users/ssyyg_nat7t2w/OneDrive/Desktop/arcade_in_console/build/game_tests.exe"
+Directory: C:/Users/ssyyg_nat7t2w/OneDrive/Desktop/arcade_in_console/build
+"all_tests" start time: Jun 14 20:58 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.12"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  16 |  16 passed | 0 failed | 0 skipped
+[doctest] assertions: 234 | 234 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"all_tests" end time: Jun 14 20:58 RTZ 2 (çèìà)
+"all_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 14 20:58 RTZ 2 (çèìà)
