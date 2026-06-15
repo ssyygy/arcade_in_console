@@ -1,3 +1,0 @@
-"C:\Program Files\mingw64\bin\cmake.exe" -E rm -f CMakeFiles\arcade_in_console.dir/objects.a
-C:\PROGRA~1\mingw64\bin\ar.exe qc CMakeFiles\arcade_in_console.dir/objects.a @CMakeFiles\arcade_in_console.dir\objects1.rsp
-C:\PROGRA~1\mingw64\bin\C__~1.EXE -Wl,--whole-archive CMakeFiles\arcade_in_console.dir/objects.a -Wl,--no-whole-archive -o arcade_in_console.exe -Wl,--out-implib,libarcade_in_console.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\arcade_in_console.dir\linkLibs.rsp
