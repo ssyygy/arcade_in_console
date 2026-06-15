@@ -77,7 +77,7 @@ void move_enemies(std::vector<Enemy>& enemies, int turn, int level) {
         enemy.set_position(new_x, new_y);
 
         if (enemy.getY() >= height - 1) {
-            throw GameOver("Porazhenie! Vrag proletel mimo!");
+            throw GameOver("Ha-ha, you lost! The enemy flew into you!");
         }
     }
 }
@@ -353,7 +353,7 @@ int main() {
         }
 
         clear_screen();
-        std::cout << "POBEDA! Vse urovni projdeny!\n";
+        std::cout << "WIIIIIIIIIN\n";
         std::cout << "Final score: " << score << "\n";
         std::this_thread::sleep_for(std::chrono::seconds(3));
         return 0;

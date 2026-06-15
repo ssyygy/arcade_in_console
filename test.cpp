@@ -8,9 +8,8 @@
 #include "game_utils.h"
 #include "players.h"
 
-// GameOver и вспомогательные функции определены здесь, чтобы не тянуть main.cpp
 class GameOver : public std::runtime_error {
-public:
+   public:
     explicit GameOver(const std::string& reason) : std::runtime_error(reason) {}
 };
 
@@ -19,8 +18,7 @@ const int height = 41;
 
 void check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies) {
     for (auto& enemy : enemies) {
-        if (enemy.state() && enemy.getX() == spaceship.getX() &&
-            enemy.getY() == spaceship.getY()) {
+        if (enemy.state() && enemy.getX() == spaceship.getX() && enemy.getY() == spaceship.getY()) {
             throw GameOver("collision");
         }
     }
@@ -218,7 +216,9 @@ TEST_CASE("Random number in range") {
     }
 }
 
-TEST_CASE("Random with same min max") { CHECK(generate_random(5, 5) == 5); }
+TEST_CASE("Random with same min max") {
+    CHECK(generate_random(5, 5) == 5);
+}
 
 TEST_CASE("Random invalid range throws") {
     CHECK_THROWS_AS(generate_random(10, 5), std::invalid_argument);
