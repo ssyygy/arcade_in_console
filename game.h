@@ -19,11 +19,11 @@ extern const int MAX_LEVEL;
  * @brief Параметры одного уровня сложности
  */
 struct LevelConfig {
-  int kills_to_boss; /**< Сколько врагов нужно убить до появления босса */
-  int max_enemies;   /**< Максимальное число живых врагов одновременно на экране
-                      */
-  int spawn_every;   /**< Враг появляется каждые N ходов */
-  int boss_hp;       /**< Здоровье босса на этом уровне */
+    int kills_to_boss; /**< Сколько врагов нужно убить до появления босса */
+    int max_enemies;   /**< Максимальное число живых врагов одновременно на экране
+                        */
+    int spawn_every;   /**< Враг появляется каждые N ходов */
+    int boss_hp;       /**< Здоровье босса на этом уровне */
 };
 
 /**
@@ -33,12 +33,12 @@ struct LevelConfig {
  * столкновении с врагом или боссом, либо когда враг пролетает мимо.
  */
 class GameOver : public std::runtime_error {
- public:
-  /**
-   * @brief Конструктор
-   * @param reason Причина проигрыша (выводится игроку)
-   */
-  explicit GameOver(const std::string& reason) : std::runtime_error(reason) {}
+   public:
+    /**
+     * @brief Конструктор
+     * @param reason Причина проигрыша (выводится игроку)
+     */
+    explicit GameOver(const std::string& reason) : std::runtime_error(reason) {}
 };
 
 /**
@@ -98,9 +98,8 @@ void move_boss(Boss& boss, int turn, int level);
  * @param totalKills Количество уничтоженных врагов на текущем уровне
  * @param currentLevel Номер текущего уровня (1–MAX_LEVEL)
  */
-void draw_field(std::vector<Bullet>& bullets, std::vector<Enemy>& enemies,
-                Spaceship& spaceship, int score, Boss& boss, bool bossActive,
-                int totalKills, int currentLevel);
+void draw_field(std::vector<Bullet>& bullets, std::vector<Enemy>& enemies, Spaceship& spaceship,
+                int score, Boss& boss, bool bossActive, int totalKills, int currentLevel);
 
 /**
  * @brief Показать экран перехода между уровнями
