@@ -18,7 +18,7 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-./console_arcade.exe
+./arcade_in_console.exe
 ```
 
 ---
