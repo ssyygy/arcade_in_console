@@ -1,10 +1,61 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
+#include <stdexcept>
+
 #include "bullets.h"
 #include "enemies.h"
 #include "game_utils.h"
 #include "players.h"
+
+// GameOver и вспомогательные функции определены здесь, чтобы не тянуть main.cpp
+class GameOver : public std::runtime_error {
+public:
+    explicit GameOver(const std::string& reason) : std::runtime_error(reason) {}
+};
+
+const int width = 41;
+const int height = 41;
+
+void check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies) {
+    for (auto& enemy : enemies) {
+        if (enemy.state() && enemy.getX() == spaceship.getX() &&
+            enemy.getY() == spaceship.getY()) {
+            throw GameOver("collision");
+        }
+    }
+}
+
+void spawn_enemy(std::vector<Enemy>& enemies, int level) {
+    if (level <= 0) throw std::invalid_argument("Level must be positive");
+    int x = generate_random(2, width - 3);
+    int y = 1;
+    bool taken = false;
+    for (const auto& e : enemies) {
+        if (e.state() && e.getX() == x && e.getY() == y) {
+            taken = true;
+            break;
+        }
+    }
+    if (!taken) enemies.emplace_back(x, y);
+}
+
+void move_enemies(std::vector<Enemy>& enemies, int turn, int level) {
+    if (turn % 3 != 0) return;
+    for (auto& enemy : enemies) {
+        if (!enemy.state()) continue;
+        int new_y = enemy.getY() + 1;
+        int new_x = enemy.getX();
+        // way==1 — вправо, way==5 — влево, остальное — прямо вниз
+        int way = generate_random(1, 5);
+        if (way == 1 && new_x < width - 2)
+            new_x++;
+        else if (way == 5 && new_x > 1)
+            new_x--;
+        enemy.set_position(new_x, new_y);
+        if (enemy.getY() >= height - 1) throw GameOver("enemy reached bottom");
+    }
+}
 
 TEST_CASE("Enemy creation and basic properties") {
     Enemy e(10, 5);
@@ -70,6 +121,59 @@ TEST_CASE("Bullet move and deactivate at top") {
     CHECK(bullet.isActiveStatus() == false);
 }
 
+TEST_CASE("Bullet kill_enemy hits enemy") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(10, 10);
+    Boss boss(0, 0);
+    bool bossActive = false;
+    int counter = 0;
+    Bullet bullet;
+    bullet.create_bullet(10, 11);
+    bullet.kill_enemy(enemies, boss, bossActive, counter);
+    CHECK(enemies[0].state() == false);
+    CHECK(bullet.isActiveStatus() == false);
+    CHECK(counter == 1);
+}
+
+TEST_CASE("Bullet kill_enemy misses enemy") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(5, 5);
+    Boss boss(0, 0);
+    bool bossActive = false;
+    int counter = 0;
+    Bullet bullet;
+    bullet.create_bullet(10, 11);
+    bullet.kill_enemy(enemies, boss, bossActive, counter);
+    CHECK(enemies[0].state() == true);
+    CHECK(bullet.isActiveStatus() == true);
+    CHECK(counter == 0);
+}
+
+TEST_CASE("Bullet kill_enemy hits boss") {
+    std::vector<Enemy> enemies;
+    Boss boss(10, 10);
+    bool bossActive = true;
+    int counter = 0;
+    Bullet bullet;
+    bullet.create_bullet(10, 11);
+    bullet.kill_enemy(enemies, boss, bossActive, counter);
+    CHECK(boss.GetHP() == 4);
+    CHECK(bullet.isActiveStatus() == false);
+    CHECK(counter == 1);
+}
+
+TEST_CASE("Bullet kill_enemy does not hit inactive boss") {
+    std::vector<Enemy> enemies;
+    Boss boss(10, 10);
+    bool bossActive = false;
+    int counter = 0;
+    Bullet bullet;
+    bullet.create_bullet(10, 11);
+    bullet.kill_enemy(enemies, boss, bossActive, counter);
+    CHECK(boss.GetHP() == 5);
+    CHECK(counter == 0);
+}
+
 TEST_CASE("Spaceship creation at center") {
     Spaceship s;
     CHECK(s.getX() == 19);
@@ -114,10 +218,71 @@ TEST_CASE("Random number in range") {
     }
 }
 
-TEST_CASE("Random with same min max") {
-    CHECK(generate_random(5, 5) == 5);
-}
+TEST_CASE("Random with same min max") { CHECK(generate_random(5, 5) == 5); }
 
 TEST_CASE("Random invalid range throws") {
     CHECK_THROWS_AS(generate_random(10, 5), std::invalid_argument);
+}
+
+TEST_CASE("check_collision no collision") {
+    Spaceship s;
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(5, 5);
+    CHECK_NOTHROW(check_collision(s, enemies));
+}
+
+TEST_CASE("check_collision throws on hit") {
+    Spaceship s;
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(s.getX(), s.getY());
+    CHECK_THROWS_AS(check_collision(s, enemies), GameOver);
+}
+
+TEST_CASE("check_collision dead enemy does not trigger") {
+    Spaceship s;
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(s.getX(), s.getY());
+    enemies[0].kill_enemy();
+    CHECK_NOTHROW(check_collision(s, enemies));
+}
+
+TEST_CASE("spawn_enemy adds enemy to list") {
+    std::vector<Enemy> enemies;
+    spawn_enemy(enemies, 1);
+    CHECK(enemies.size() >= 1);
+}
+
+TEST_CASE("spawn_enemy invalid level throws") {
+    std::vector<Enemy> enemies;
+    CHECK_THROWS_AS(spawn_enemy(enemies, 0), std::invalid_argument);
+    CHECK_THROWS_AS(spawn_enemy(enemies, -1), std::invalid_argument);
+}
+
+TEST_CASE("move_enemies moves on turn divisible by 3") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(10, 5);
+    int startY = enemies[0].getY();
+    move_enemies(enemies, 0, 1);
+    CHECK(enemies[0].getY() > startY);
+}
+
+TEST_CASE("move_enemies does not move on other turns") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(10, 5);
+    int startY = enemies[0].getY();
+    move_enemies(enemies, 1, 1);
+    CHECK(enemies[0].getY() == startY);
+}
+
+TEST_CASE("move_enemies throws when enemy reaches bottom") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(10, 39);
+    CHECK_THROWS_AS(move_enemies(enemies, 0, 1), GameOver);
+}
+
+TEST_CASE("move_enemies skips dead enemies") {
+    std::vector<Enemy> enemies;
+    enemies.emplace_back(10, 39);
+    enemies[0].kill_enemy();
+    CHECK_NOTHROW(move_enemies(enemies, 0, 1));
 }
