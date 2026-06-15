@@ -11,7 +11,7 @@
 
 ## Как собрать и запустить
 
-### Windows\macOS
+### Windows/macOS
 
 ```
 mkdir build

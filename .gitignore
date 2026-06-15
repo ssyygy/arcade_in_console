@@ -1,0 +1,35 @@
+# Папка сборки
+build/
+
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+CTestTestfile.cmake
+
+# Скомпилированные файлы
+*.exe
+*.out
+*.o
+*.a
+*.lib
+*.dll
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
