@@ -14,6 +14,7 @@
 ### Windows/macOS
 
 ```
+cd arcade_in_console
 mkdir build
 cd build
 cmake ..

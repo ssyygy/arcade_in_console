@@ -52,5 +52,5 @@ int generate_random(int min, int max);
 #define CHAR_EXPLODE "\U0001F4A5"  // 💥
 #define CHAR_BOSS "\U0001F480"     // 💀
 #define CHAR_EMPTY "  "
-#define CHAR_STAR "\U0001F31F"  // 🌟
+#define CHAR_STAR " ."
 #endif
