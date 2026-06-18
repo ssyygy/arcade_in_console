@@ -91,33 +91,552 @@ $(function(){initNavTree('src_2test_8cpp.html','',''); });
   <div class="headertitle"><div class="title">test.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;doctest/doctest.h&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
-<code>#include &lt;thread&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="bullets_8h_source.html">bullets.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="enemies_8h_source.html">enemies.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="game__utils_8h_source.html">game_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="players_8h_source.html">players.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a623b8690a262536536a43eab2d7df03d" id="r_a623b8690a262536536a43eab2d7df03d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a623b8690a262536536a43eab2d7df03d">DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memitem:a7b110557ba99a2770b861431210ca1f1" id="r_a7b110557ba99a2770b861431210ca1f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b110557ba99a2770b861431210ca1f1">TEST_CASE</a> (&quot;Enemy creation and basic properties&quot;)</td></tr>
+<tr class="memitem:ac86e410a6d6cbdba91c84451bcc8df1c" id="r_ac86e410a6d6cbdba91c84451bcc8df1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac86e410a6d6cbdba91c84451bcc8df1c">TEST_CASE</a> (&quot;Enemy kill and state change&quot;)</td></tr>
+<tr class="memitem:ad0746691ef073edb602318c38e74ca4c" id="r_ad0746691ef073edb602318c38e74ca4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0746691ef073edb602318c38e74ca4c">TEST_CASE</a> (&quot;Enemy position setting&quot;)</td></tr>
+<tr class="memitem:a9bb47b8ca7c6a5aa5c7d65a8515654a2" id="r_a9bb47b8ca7c6a5aa5c7d65a8515654a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bb47b8ca7c6a5aa5c7d65a8515654a2">TEST_CASE</a> (&quot;Enemy move down&quot;)</td></tr>
+<tr class="memitem:a800c5631d5940c5822bfbe231a11abc9" id="r_a800c5631d5940c5822bfbe231a11abc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a800c5631d5940c5822bfbe231a11abc9">TEST_CASE</a> (&quot;Boss creation and health&quot;)</td></tr>
+<tr class="memitem:aeced1c32a598d92a5cfa399c1b19309d" id="r_aeced1c32a598d92a5cfa399c1b19309d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeced1c32a598d92a5cfa399c1b19309d">TEST_CASE</a> (&quot;Boss take damage until death&quot;)</td></tr>
+<tr class="memitem:ab55371e921edd368c5f4ca9a4b38e439" id="r_ab55371e921edd368c5f4ca9a4b38e439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab55371e921edd368c5f4ca9a4b38e439">TEST_CASE</a> (&quot;Bullet lifecycle&quot;)</td></tr>
+<tr class="memitem:a06410c8be3c40a05f25eb721027e4918" id="r_a06410c8be3c40a05f25eb721027e4918"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06410c8be3c40a05f25eb721027e4918">TEST_CASE</a> (&quot;Bullet move and deactivate at top&quot;)</td></tr>
+<tr class="memitem:ae4e1225c9f0fe362541859df51330327" id="r_ae4e1225c9f0fe362541859df51330327"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e1225c9f0fe362541859df51330327">TEST_CASE</a> (&quot;Bullet kill_enemy hits enemy&quot;)</td></tr>
+<tr class="memitem:a07c4630e5b8f001f85e3d00ec730e544" id="r_a07c4630e5b8f001f85e3d00ec730e544"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c4630e5b8f001f85e3d00ec730e544">TEST_CASE</a> (&quot;Bullet kill_enemy misses enemy&quot;)</td></tr>
+<tr class="memitem:a41df3cfa3058f446d69bc9f71c6b310c" id="r_a41df3cfa3058f446d69bc9f71c6b310c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41df3cfa3058f446d69bc9f71c6b310c">TEST_CASE</a> (&quot;Bullet kill_enemy hits boss&quot;)</td></tr>
+<tr class="memitem:a40e2e5151534778523081982e0894a37" id="r_a40e2e5151534778523081982e0894a37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e2e5151534778523081982e0894a37">TEST_CASE</a> (&quot;Bullet kill_enemy does not hit inactive boss&quot;)</td></tr>
+<tr class="memitem:a18ca5025fc3bdc38a53b947af086fae5" id="r_a18ca5025fc3bdc38a53b947af086fae5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18ca5025fc3bdc38a53b947af086fae5">TEST_CASE</a> (&quot;Spaceship creation at center&quot;)</td></tr>
+<tr class="memitem:afd9d81698d2f44b53a1a67a64c0474c8" id="r_afd9d81698d2f44b53a1a67a64c0474c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd9d81698d2f44b53a1a67a64c0474c8">TEST_CASE</a> (&quot;Spaceship move left&quot;)</td></tr>
+<tr class="memitem:ab877982b6e931938dab1fcd32162d260" id="r_ab877982b6e931938dab1fcd32162d260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab877982b6e931938dab1fcd32162d260">TEST_CASE</a> (&quot;Spaceship move right&quot;)</td></tr>
+<tr class="memitem:a59ef8b0c26b2cb97e08b845e719ba699" id="r_a59ef8b0c26b2cb97e08b845e719ba699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59ef8b0c26b2cb97e08b845e719ba699">TEST_CASE</a> (&quot;Spaceship left boundary&quot;)</td></tr>
+<tr class="memitem:aa6196a1bc508a85463a1296f59ec2877" id="r_aa6196a1bc508a85463a1296f59ec2877"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6196a1bc508a85463a1296f59ec2877">TEST_CASE</a> (&quot;Spaceship right boundary&quot;)</td></tr>
+<tr class="memitem:a21c49f9a8b8f343266f438b6b7e2a6d9" id="r_a21c49f9a8b8f343266f438b6b7e2a6d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c49f9a8b8f343266f438b6b7e2a6d9">TEST_CASE</a> (&quot;Random number in range&quot;)</td></tr>
+<tr class="memitem:a6a12c0d984eadc8bdd685b2d5fe973db" id="r_a6a12c0d984eadc8bdd685b2d5fe973db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a12c0d984eadc8bdd685b2d5fe973db">TEST_CASE</a> (&quot;Random with same min max&quot;)</td></tr>
+<tr class="memitem:ad9b66c958b2402c07029601a227e038c" id="r_ad9b66c958b2402c07029601a227e038c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9b66c958b2402c07029601a227e038c">TEST_CASE</a> (&quot;Random invalid range throws&quot;)</td></tr>
+<tr class="memitem:acbea3b22999b5ecc5bfe139b1601e20e" id="r_acbea3b22999b5ecc5bfe139b1601e20e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbea3b22999b5ecc5bfe139b1601e20e">TEST_CASE</a> (&quot;check_collision no collision&quot;)</td></tr>
+<tr class="memitem:a3bcc45f1cf1fd4b2768518cd554673a6" id="r_a3bcc45f1cf1fd4b2768518cd554673a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcc45f1cf1fd4b2768518cd554673a6">TEST_CASE</a> (&quot;check_collision throws on hit&quot;)</td></tr>
+<tr class="memitem:a92274d756789e166d63fe9ff14176bb0" id="r_a92274d756789e166d63fe9ff14176bb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92274d756789e166d63fe9ff14176bb0">TEST_CASE</a> (&quot;check_collision dead enemy does not trigger&quot;)</td></tr>
+<tr class="memitem:a9ee928ec859c281d81bcdb52ad5c9510" id="r_a9ee928ec859c281d81bcdb52ad5c9510"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ee928ec859c281d81bcdb52ad5c9510">TEST_CASE</a> (&quot;spawn_enemy adds enemy to list&quot;)</td></tr>
+<tr class="memitem:a9242d723fe768c63139a57556b12a8c5" id="r_a9242d723fe768c63139a57556b12a8c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9242d723fe768c63139a57556b12a8c5">TEST_CASE</a> (&quot;spawn_enemy invalid level throws&quot;)</td></tr>
+<tr class="memitem:af66fd16b57ad6dc62afe7d9d14c48ac4" id="r_af66fd16b57ad6dc62afe7d9d14c48ac4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af66fd16b57ad6dc62afe7d9d14c48ac4">TEST_CASE</a> (&quot;move_enemies moves on turn divisible by 3&quot;)</td></tr>
+<tr class="memitem:a843070286d4016c9c92b4adbbc3131ce" id="r_a843070286d4016c9c92b4adbbc3131ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a843070286d4016c9c92b4adbbc3131ce">TEST_CASE</a> (&quot;move_enemies does not move on other turns&quot;)</td></tr>
+<tr class="memitem:a94acfb27984be96baddb6969d7dc3819" id="r_a94acfb27984be96baddb6969d7dc3819"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94acfb27984be96baddb6969d7dc3819">TEST_CASE</a> (&quot;move_enemies throws when enemy reaches bottom&quot;)</td></tr>
+<tr class="memitem:ac38f757660dcb32311b709e06711ddd4" id="r_ac38f757660dcb32311b709e06711ddd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac38f757660dcb32311b709e06711ddd4">TEST_CASE</a> (&quot;move_enemies skips dead enemies&quot;)</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a623b8690a262536536a43eab2d7df03d" name="a623b8690a262536536a43eab2d7df03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623b8690a262536536a43eab2d7df03d">&#9670;&#160;</a></span>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a800c5631d5940c5822bfbe231a11abc9" name="a800c5631d5940c5822bfbe231a11abc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800c5631d5940c5822bfbe231a11abc9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">&quot;Boss creation and health&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeced1c32a598d92a5cfa399c1b19309d" name="aeced1c32a598d92a5cfa399c1b19309d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeced1c32a598d92a5cfa399c1b19309d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Boss take damage until death&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40e2e5151534778523081982e0894a37" name="a40e2e5151534778523081982e0894a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e2e5151534778523081982e0894a37">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet kill_enemy does not hit inactive boss&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41df3cfa3058f446d69bc9f71c6b310c" name="a41df3cfa3058f446d69bc9f71c6b310c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41df3cfa3058f446d69bc9f71c6b310c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet kill_enemy hits boss&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4e1225c9f0fe362541859df51330327" name="ae4e1225c9f0fe362541859df51330327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e1225c9f0fe362541859df51330327">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet kill_enemy hits enemy&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07c4630e5b8f001f85e3d00ec730e544" name="a07c4630e5b8f001f85e3d00ec730e544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c4630e5b8f001f85e3d00ec730e544">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet kill_enemy misses enemy&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab55371e921edd368c5f4ca9a4b38e439" name="ab55371e921edd368c5f4ca9a4b38e439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55371e921edd368c5f4ca9a4b38e439">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet lifecycle&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06410c8be3c40a05f25eb721027e4918" name="a06410c8be3c40a05f25eb721027e4918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06410c8be3c40a05f25eb721027e4918">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Bullet move and deactivate at top&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92274d756789e166d63fe9ff14176bb0" name="a92274d756789e166d63fe9ff14176bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92274d756789e166d63fe9ff14176bb0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;check_collision dead enemy does not trigger&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbea3b22999b5ecc5bfe139b1601e20e" name="acbea3b22999b5ecc5bfe139b1601e20e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbea3b22999b5ecc5bfe139b1601e20e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;check_collision no collision&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bcc45f1cf1fd4b2768518cd554673a6" name="a3bcc45f1cf1fd4b2768518cd554673a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcc45f1cf1fd4b2768518cd554673a6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;check_collision throws on hit&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b110557ba99a2770b861431210ca1f1" name="a7b110557ba99a2770b861431210ca1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b110557ba99a2770b861431210ca1f1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Enemy creation and basic properties&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac86e410a6d6cbdba91c84451bcc8df1c" name="ac86e410a6d6cbdba91c84451bcc8df1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86e410a6d6cbdba91c84451bcc8df1c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Enemy kill and state change&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bb47b8ca7c6a5aa5c7d65a8515654a2" name="a9bb47b8ca7c6a5aa5c7d65a8515654a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb47b8ca7c6a5aa5c7d65a8515654a2">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Enemy move down&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0746691ef073edb602318c38e74ca4c" name="ad0746691ef073edb602318c38e74ca4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0746691ef073edb602318c38e74ca4c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Enemy position setting&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a843070286d4016c9c92b4adbbc3131ce" name="a843070286d4016c9c92b4adbbc3131ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843070286d4016c9c92b4adbbc3131ce">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;move_enemies does not move on other turns&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af66fd16b57ad6dc62afe7d9d14c48ac4" name="af66fd16b57ad6dc62afe7d9d14c48ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66fd16b57ad6dc62afe7d9d14c48ac4">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[17/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;move_enemies moves on turn divisible by 3&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac38f757660dcb32311b709e06711ddd4" name="ac38f757660dcb32311b709e06711ddd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac38f757660dcb32311b709e06711ddd4">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[18/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;move_enemies skips dead enemies&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94acfb27984be96baddb6969d7dc3819" name="a94acfb27984be96baddb6969d7dc3819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94acfb27984be96baddb6969d7dc3819">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[19/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;move_enemies throws when enemy reaches bottom&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9b66c958b2402c07029601a227e038c" name="ad9b66c958b2402c07029601a227e038c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b66c958b2402c07029601a227e038c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[20/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Random invalid range throws&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21c49f9a8b8f343266f438b6b7e2a6d9" name="a21c49f9a8b8f343266f438b6b7e2a6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c49f9a8b8f343266f438b6b7e2a6d9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[21/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Random number in range&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a12c0d984eadc8bdd685b2d5fe973db" name="a6a12c0d984eadc8bdd685b2d5fe973db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a12c0d984eadc8bdd685b2d5fe973db">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[22/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Random with same min max&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18ca5025fc3bdc38a53b947af086fae5" name="a18ca5025fc3bdc38a53b947af086fae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ca5025fc3bdc38a53b947af086fae5">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[23/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Spaceship creation at center&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59ef8b0c26b2cb97e08b845e719ba699" name="a59ef8b0c26b2cb97e08b845e719ba699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ef8b0c26b2cb97e08b845e719ba699">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[24/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Spaceship left boundary&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd9d81698d2f44b53a1a67a64c0474c8" name="afd9d81698d2f44b53a1a67a64c0474c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd9d81698d2f44b53a1a67a64c0474c8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[25/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Spaceship move left&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab877982b6e931938dab1fcd32162d260" name="ab877982b6e931938dab1fcd32162d260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab877982b6e931938dab1fcd32162d260">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[26/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Spaceship move right&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6196a1bc508a85463a1296f59ec2877" name="aa6196a1bc508a85463a1296f59ec2877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6196a1bc508a85463a1296f59ec2877">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[27/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Spaceship right boundary&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ee928ec859c281d81bcdb52ad5c9510" name="a9ee928ec859c281d81bcdb52ad5c9510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee928ec859c281d81bcdb52ad5c9510">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[28/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;spawn_enemy adds enemy to list&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9242d723fe768c63139a57556b12a8c5" name="a9242d723fe768c63139a57556b12a8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9242d723fe768c63139a57556b12a8c5">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[29/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;spawn_enemy invalid level throws&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
