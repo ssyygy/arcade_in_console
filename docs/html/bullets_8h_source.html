@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Arcade in consol: bullets.h Source File</title>
+<title>Arcade in consol: src/bullets.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,35 +98,34 @@ $(function(){initNavTree('bullets_8h_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_bullet.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb">Bullet</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">int</span> x;         </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">int</span> y;         </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">bool</span> isActive; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">int</span> x;         </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> y;         </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> isActive; </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_function" href="class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb">Bullet</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb">Bullet</a>();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_bullet.html#abe5e0b0862207f4a716d7d7d40ccb305">getX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_bullet.html#abe5e0b0862207f4a716d7d7d40ccb305">getX</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_bullet.html#aa186dfa46c7d3003bfa8d701a93434ea">getY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_bullet.html#aa186dfa46c7d3003bfa8d701a93434ea">getY</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_bullet.html#a9c75be6d3ef0c61a9ce5e73a38cb9cd8">isActiveStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_bullet.html#a9c75be6d3ef0c61a9ce5e73a38cb9cd8">isActiveStatus</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#a81cdc2e0c6bd64b449db1d9f030bf29f">create_bullet</a>(<span class="keywordtype">int</span> x_now, <span class="keywordtype">int</span> y_now);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#a81cdc2e0c6bd64b449db1d9f030bf29f">create_bullet</a>(<span class="keywordtype">int</span> x_now, <span class="keywordtype">int</span> y_now);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#a6140db968c42c05e829e142f74f20b16">move</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#a6140db968c42c05e829e142f74f20b16">move</a>();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#ac85d723352aa86ffb224a0e6b3194f95">kill_enemy</a>(std::vector&lt;Enemy&gt;&amp; enemies, <a class="code hl_class" href="class_boss.html">Boss</a>&amp; boss, <span class="keywordtype">bool</span>&amp; bossActive,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                  <span class="keywordtype">int</span>&amp; global_counter);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bullet.html#ac85d723352aa86ffb224a0e6b3194f95">kill_enemy</a>(std::vector&lt;Enemy&gt;&amp; enemies, <a class="code hl_class" href="class_boss.html">Boss</a>&amp; boss, <span class="keywordtype">bool</span>&amp; bossActive, <span class="keywordtype">int</span>&amp; global_counter);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
 <div class="ttc" id="aclass_boss_html"><div class="ttname"><a href="class_boss.html">Boss</a></div><div class="ttdoc">Босс — усиленный враг с несколькими очками здоровья</div><div class="ttdef"><b>Definition</b> enemies.h:72</div></div>
-<div class="ttc" id="aclass_bullet_html_a6140db968c42c05e829e142f74f20b16"><div class="ttname"><a href="class_bullet.html#a6140db968c42c05e829e142f74f20b16">Bullet::move</a></div><div class="ttdeci">void move()</div><div class="ttdoc">Переместить пулю вверх, деактивировать при выходе за экран</div><div class="ttdef"><b>Definition</b> bullets.cpp:17</div></div>
-<div class="ttc" id="aclass_bullet_html_a81cdc2e0c6bd64b449db1d9f030bf29f"><div class="ttname"><a href="class_bullet.html#a81cdc2e0c6bd64b449db1d9f030bf29f">Bullet::create_bullet</a></div><div class="ttdeci">void create_bullet(int x_now, int y_now)</div><div class="ttdoc">Создать пулю из позиции корабля</div><div class="ttdef"><b>Definition</b> bullets.cpp:9</div></div>
-<div class="ttc" id="aclass_bullet_html_a9c75be6d3ef0c61a9ce5e73a38cb9cd8"><div class="ttname"><a href="class_bullet.html#a9c75be6d3ef0c61a9ce5e73a38cb9cd8">Bullet::isActiveStatus</a></div><div class="ttdeci">bool isActiveStatus() const</div><div class="ttdef"><b>Definition</b> bullets.cpp:7</div></div>
-<div class="ttc" id="aclass_bullet_html_aa186dfa46c7d3003bfa8d701a93434ea"><div class="ttname"><a href="class_bullet.html#aa186dfa46c7d3003bfa8d701a93434ea">Bullet::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdef"><b>Definition</b> bullets.cpp:6</div></div>
+<div class="ttc" id="aclass_bullet_html_a6140db968c42c05e829e142f74f20b16"><div class="ttname"><a href="class_bullet.html#a6140db968c42c05e829e142f74f20b16">Bullet::move</a></div><div class="ttdeci">void move()</div><div class="ttdoc">Переместить пулю вверх, деактивировать при выходе за экран</div><div class="ttdef"><b>Definition</b> bullets.cpp:23</div></div>
+<div class="ttc" id="aclass_bullet_html_a81cdc2e0c6bd64b449db1d9f030bf29f"><div class="ttname"><a href="class_bullet.html#a81cdc2e0c6bd64b449db1d9f030bf29f">Bullet::create_bullet</a></div><div class="ttdeci">void create_bullet(int x_now, int y_now)</div><div class="ttdoc">Создать пулю из позиции корабля</div><div class="ttdef"><b>Definition</b> bullets.cpp:15</div></div>
+<div class="ttc" id="aclass_bullet_html_a9c75be6d3ef0c61a9ce5e73a38cb9cd8"><div class="ttname"><a href="class_bullet.html#a9c75be6d3ef0c61a9ce5e73a38cb9cd8">Bullet::isActiveStatus</a></div><div class="ttdeci">bool isActiveStatus() const</div><div class="ttdef"><b>Definition</b> bullets.cpp:11</div></div>
+<div class="ttc" id="aclass_bullet_html_aa186dfa46c7d3003bfa8d701a93434ea"><div class="ttname"><a href="class_bullet.html#aa186dfa46c7d3003bfa8d701a93434ea">Bullet::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdef"><b>Definition</b> bullets.cpp:8</div></div>
 <div class="ttc" id="aclass_bullet_html_abe5e0b0862207f4a716d7d7d40ccb305"><div class="ttname"><a href="class_bullet.html#abe5e0b0862207f4a716d7d7d40ccb305">Bullet::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdef"><b>Definition</b> bullets.cpp:5</div></div>
-<div class="ttc" id="aclass_bullet_html_ac85d723352aa86ffb224a0e6b3194f95"><div class="ttname"><a href="class_bullet.html#ac85d723352aa86ffb224a0e6b3194f95">Bullet::kill_enemy</a></div><div class="ttdeci">void kill_enemy(std::vector&lt; Enemy &gt; &amp;enemies, Boss &amp;boss, bool &amp;bossActive, int &amp;global_counter)</div><div class="ttdoc">Проверить попадание пули во врага или босса</div><div class="ttdef"><b>Definition</b> bullets.cpp:26</div></div>
+<div class="ttc" id="aclass_bullet_html_ac85d723352aa86ffb224a0e6b3194f95"><div class="ttname"><a href="class_bullet.html#ac85d723352aa86ffb224a0e6b3194f95">Bullet::kill_enemy</a></div><div class="ttdeci">void kill_enemy(std::vector&lt; Enemy &gt; &amp;enemies, Boss &amp;boss, bool &amp;bossActive, int &amp;global_counter)</div><div class="ttdoc">Проверить попадание пули во врага или босса</div><div class="ttdef"><b>Definition</b> bullets.cpp:32</div></div>
 <div class="ttc" id="aclass_bullet_html_acd7befc0bc18907cc1d871d37bbdddeb"><div class="ttname"><a href="class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb">Bullet::Bullet</a></div><div class="ttdeci">Bullet()</div><div class="ttdoc">Конструктор — создаёт неактивную пулю</div><div class="ttdef"><b>Definition</b> bullets.cpp:3</div></div>
 <div class="ttc" id="aenemies_8h_html"><div class="ttname"><a href="enemies_8h.html">enemies.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -135,7 +134,7 @@ $(function(){initNavTree('bullets_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="bullets_8h.html">bullets.h</a></li>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="bullets_8h.html">bullets.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

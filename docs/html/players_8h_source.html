@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Arcade in consol: players.h Source File</title>
+<title>Arcade in consol: src/players.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,23 +95,23 @@ $(function(){initNavTree('players_8h_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_spaceship.html">   11</a></span><span class="keyword">class </span><a class="code hl_function" href="class_spaceship.html#a13f1c8eb5ded2fb1687203322b22bca9">Spaceship</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordtype">int</span> x; </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordtype">int</span> y; </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> x; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> y; </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_function" href="class_spaceship.html#a13f1c8eb5ded2fb1687203322b22bca9">Spaceship</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="class_spaceship.html#a13f1c8eb5ded2fb1687203322b22bca9">Spaceship</a>();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_spaceship.html#a811f414d1215299c27cbbb104fe1a7fc">move</a>(<span class="keywordtype">char</span> command);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_spaceship.html#a811f414d1215299c27cbbb104fe1a7fc">move</a>(<span class="keywordtype">char</span> command);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_spaceship.html#ae84851069ce12fc5a45ba97251d9c1f9">getX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_spaceship.html#ae84851069ce12fc5a45ba97251d9c1f9">getX</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_spaceship.html#adbd7ccd19ce75a772eb25f91432770c4">getY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_spaceship.html#adbd7ccd19ce75a772eb25f91432770c4">getY</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
 </div>
 <div class="ttc" id="aclass_spaceship_html_a13f1c8eb5ded2fb1687203322b22bca9"><div class="ttname"><a href="class_spaceship.html#a13f1c8eb5ded2fb1687203322b22bca9">Spaceship::Spaceship</a></div><div class="ttdeci">Spaceship()</div><div class="ttdoc">Конструктор — создаёт корабль в центре нижней части</div><div class="ttdef"><b>Definition</b> players.cpp:3</div></div>
 <div class="ttc" id="aclass_spaceship_html_a811f414d1215299c27cbbb104fe1a7fc"><div class="ttname"><a href="class_spaceship.html#a811f414d1215299c27cbbb104fe1a7fc">Spaceship::move</a></div><div class="ttdeci">void move(char command)</div><div class="ttdoc">Переместить корабль влево/вправо</div><div class="ttdef"><b>Definition</b> players.cpp:5</div></div>
-<div class="ttc" id="aclass_spaceship_html_adbd7ccd19ce75a772eb25f91432770c4"><div class="ttname"><a href="class_spaceship.html#adbd7ccd19ce75a772eb25f91432770c4">Spaceship::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdef"><b>Definition</b> players.cpp:11</div></div>
+<div class="ttc" id="aclass_spaceship_html_adbd7ccd19ce75a772eb25f91432770c4"><div class="ttname"><a href="class_spaceship.html#adbd7ccd19ce75a772eb25f91432770c4">Spaceship::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdef"><b>Definition</b> players.cpp:13</div></div>
 <div class="ttc" id="aclass_spaceship_html_ae84851069ce12fc5a45ba97251d9c1f9"><div class="ttname"><a href="class_spaceship.html#ae84851069ce12fc5a45ba97251d9c1f9">Spaceship::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdef"><b>Definition</b> players.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -119,7 +119,7 @@ $(function(){initNavTree('players_8h_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="players_8h.html">players.h</a></li>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="players_8h.html">players.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

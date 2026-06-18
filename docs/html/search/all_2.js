@@ -1,5 +1,26 @@
 var searchData=
 [
-  ['doctest_5fconfig_5fimplement_5fwith_5fmain_0',['DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN',['../test_8cpp.html#a623b8690a262536536a43eab2d7df03d',1,'test.cpp']]],
-  ['draw_5ffield_1',['draw_field',['../game_8h.html#a013642573e76ef6d17fa60efb5ee83a1',1,'draw_field(std::vector&lt; Bullet &gt; &amp;bullets, std::vector&lt; Enemy &gt; &amp;enemies, Spaceship &amp;spaceship, int score, Boss &amp;boss, bool bossActive, int totalKills, int currentLevel):&#160;main.cpp'],['../main_8cpp.html#a013642573e76ef6d17fa60efb5ee83a1',1,'draw_field(std::vector&lt; Bullet &gt; &amp;bullets, std::vector&lt; Enemy &gt; &amp;enemies, Spaceship &amp;spaceship, int score, Boss &amp;boss, bool bossActive, int totalKills, int currentLevel):&#160;main.cpp']]]
+  ['b_0',['B',['../struct_n_1_1_b.html',1,'N::B'],['../struct_type_pair.html#a91c3db1aa16650c80fd26610a0a04982',1,'TypePair::B']]],
+  ['b_1',['b',['../struct_s.html#ab5014c08c17ea3c8e3e62bcf8a4ae577',1,'S']]],
+  ['bar_2',['Bar',['../namespace_bar.html',1,'']]],
+  ['bar_3',['bar',['../foo_8h.html#ad8a2dfa8cbec508ec4cf97b2c5452797',1,'foo.h']]],
+  ['basic_5fistream_4',['basic_istream',['../classstd_1_1basic__istream.html',1,'std']]],
+  ['basic_5fistream_3c_20char_2c_20char_5ftraits_3c_20char_20_3e_20_3e_5',['basic_istream&lt; char, char_traits&lt; char &gt; &gt;',['../classstd_1_1basic__istream.html',1,'std']]],
+  ['basic_5fostream_6',['basic_ostream',['../classstd_1_1basic__ostream.html',1,'std']]],
+  ['basic_5fostream_3c_20char_2c_20char_5ftraits_3c_20char_20_3e_20_3e_7',['basic_ostream&lt; char, char_traits&lt; char &gt; &gt;',['../classstd_1_1basic__ostream.html',1,'std']]],
+  ['binary_5fassert_8',['binary_assert',['../structdoctest_1_1detail_1_1_result_builder.html#aa920a0617a26939d7adcd1ba2dec0e85',1,'doctest::detail::ResultBuilder::binary_assert(const DOCTEST_REF_WRAP(L) lhs, const DOCTEST_REF_WRAP(R) rhs)'],['../structdoctest_1_1detail_1_1_result_builder.html#aa920a0617a26939d7adcd1ba2dec0e85',1,'doctest::detail::ResultBuilder::binary_assert(const DOCTEST_REF_WRAP(L) lhs, const DOCTEST_REF_WRAP(R) rhs)'],['../namespacedoctest_1_1detail.html#a1e295c708d2de0e47ac89c1632211159',1,'doctest::detail::binary_assert()']]],
+  ['binary_5fname_9',['binary_name',['../structdoctest_1_1_context_options.html#a0590006b4d10296c9a697e32ff886f74',1,'doctest::ContextOptions']]],
+  ['bitfield_5fpacked_5fstruct_2ecpp_10',['bitfield_packed_struct.cpp',['../bitfield__packed__struct_8cpp.html',1,'']]],
+  ['bitfields_2ecpp_11',['bitfields.cpp',['../bitfields_8cpp.html',1,'']]],
+  ['blue_12',['Blue',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a477d44d537fc553857b024f298dda232',1,'doctest::Color']]],
+  ['boss_13',['Boss',['../class_boss.html',1,'Boss'],['../class_boss.html#a06b2ea4b144d05c514d288dbe047d060',1,'Boss::Boss()']]],
+  ['boss_5fhp_14',['boss_hp',['../struct_level_config.html#a103b0d70376e64841f9acd66df0935bf',1,'LevelConfig']]],
+  ['bright_15',['Bright',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a276b1f947479fef69b1730d35df98423',1,'doctest::Color']]],
+  ['brightgreen_16',['BrightGreen',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92aa2fd8910c9f8721d8797046f0ce4ba04',1,'doctest::Color']]],
+  ['brightred_17',['BrightRed',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a2df3a0a14ab07e81e5364d504f02c84a',1,'doctest::Color']]],
+  ['brightwhite_18',['BrightWhite',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a1ffe839e6b004aa371dfa3ac443aa74d',1,'doctest::Color']]],
+  ['buf_19',['buf',['../classdoctest_1_1_string.html#a7e031ced488588936a540eba26facf67',1,'doctest::String']]],
+  ['bullet_20',['Bullet',['../class_bullet.html',1,'Bullet'],['../class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb',1,'Bullet::Bullet()']]],
+  ['bullets_2ecpp_21',['bullets.cpp',['../bullets_8cpp.html',1,'']]],
+  ['bullets_2eh_22',['bullets.h',['../bullets_8h.html',1,'']]]
 ];

@@ -10,11 +10,12 @@ if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.0")
 endif()
 
 add_executable(arcade_in_console
-    main.cpp
-    enemies.cpp
-    bullets.cpp
-    players.cpp
-    game_utils.cpp
+    src/main.cpp
+    src/game.cpp
+    src/enemies.cpp
+    src/bullets.cpp
+    src/players.cpp
+    src/game_utils.cpp
 )
 
 enable_testing()
@@ -28,11 +29,12 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(doctest)
 
 add_executable(game_tests
-    test.cpp
-    enemies.cpp
-    bullets.cpp
-    players.cpp
-    game_utils.cpp
+    src/test.cpp
+    src/game.cpp
+    src/enemies.cpp
+    src/bullets.cpp
+    src/players.cpp
+    src/game_utils.cpp
 )
 
 target_link_libraries(game_tests doctest::doctest)

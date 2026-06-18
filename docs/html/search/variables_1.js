@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['hasanimationshown_0',['hasAnimationShown',['../class_enemy.html#a9e2060477f7e1b471b92bbca8062c3f2',1,'Enemy']]],
-  ['height_1',['height',['../game_8h.html#ad13e9131f5062934438fa82334e4b2ee',1,'height:&#160;main.cpp'],['../main_8cpp.html#ad13e9131f5062934438fa82334e4b2ee',1,'height:&#160;main.cpp']]]
+  ['b_0',['b',['../struct_s.html#ab5014c08c17ea3c8e3e62bcf8a4ae577',1,'S']]],
+  ['binary_5fname_1',['binary_name',['../structdoctest_1_1_context_options.html#a0590006b4d10296c9a697e32ff886f74',1,'doctest::ContextOptions']]],
+  ['boss_5fhp_2',['boss_hp',['../struct_level_config.html#a103b0d70376e64841f9acd66df0935bf',1,'LevelConfig']]],
+  ['buf_3',['buf',['../classdoctest_1_1_string.html#a7e031ced488588936a540eba26facf67',1,'doctest::String']]]
 ];

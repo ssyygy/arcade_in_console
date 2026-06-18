@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['set_5fposition_0',['set_position',['../class_enemy.html#a43b1bdb5f9518ac398f3189122f813fd',1,'Enemy']]],
-  ['setup_5fconsole_1',['setup_console',['../game__utils_8cpp.html#a1df9e4242686fe8ee16a4aae9ccef346',1,'setup_console():&#160;game_utils.cpp'],['../game__utils_8h.html#a1df9e4242686fe8ee16a4aae9ccef346',1,'setup_console():&#160;game_utils.cpp']]],
-  ['show_5fanimation_2',['show_animation',['../class_enemy.html#a8796de5204bcb32e5a61bd3927e1297f',1,'Enemy']]],
-  ['show_5flevel_5fscreen_3',['show_level_screen',['../game_8h.html#ae48e4f1c348562579b9411760ec0bdef',1,'show_level_screen(int level, int score):&#160;main.cpp'],['../main_8cpp.html#ae48e4f1c348562579b9411760ec0bdef',1,'show_level_screen(int level, int score):&#160;main.cpp']]],
-  ['spaceship_4',['Spaceship',['../class_spaceship.html#a13f1c8eb5ded2fb1687203322b22bca9',1,'Spaceship']]],
-  ['spawn_5fenemy_5',['spawn_enemy',['../game_8h.html#a97452a0f61369588624278cd10828c4b',1,'spawn_enemy(std::vector&lt; Enemy &gt; &amp;enemies, int level):&#160;main.cpp'],['../main_8cpp.html#a97452a0f61369588624278cd10828c4b',1,'spawn_enemy(std::vector&lt; Enemy &gt; &amp;enemies, int level):&#160;main.cpp']]],
-  ['state_6',['state',['../class_enemy.html#ad4e171cb910fc56a3398da665b946a92',1,'Enemy']]]
+  ['instantiationhelper_0',['instantiationHelper',['../namespacedoctest_1_1detail.html#aad401b097a9af4df1d4a9d0911957c0f',1,'doctest::detail']]],
+  ['insufficient_5fprocs_1',['insufficient_procs',['../namespacedoctest.html#a76a218693ac1c707f8e4799571229267',1,'doctest']]],
+  ['int_5fpointer_2',['int_pointer',['../structint__pointer.html#a83cc977fa12fa1eb2e068ccad2ed64d1',1,'int_pointer::int_pointer()=default'],['../structint__pointer.html#acabfc8e1432c26618fe75dac1c0d3a04',1,'int_pointer::int_pointer(int &amp;i)']]],
+  ['is_5fanimation_5fshown_3',['is_animation_shown',['../class_enemy.html#aea523cdc1a1c82a416f1e4b9692f27d6',1,'Enemy']]],
+  ['is_5fdestroyed_4',['is_destroyed',['../class_enemy.html#a9283f8d8a63449905f1a3e2cb208e167',1,'Enemy']]],
+  ['isactivestatus_5',['isActiveStatus',['../class_bullet.html#a9c75be6d3ef0c61a9ce5e73a38cb9cd8',1,'Bullet']]],
+  ['isdebuggeractive_6',['isDebuggerActive',['../namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710',1,'doctest::detail']]],
+  ['isnan_7',['IsNaN',['../structdoctest_1_1_is_na_n.html#a47f3957c504f7d8bc40dd4014cce5ee1',1,'doctest::IsNaN::IsNaN(F f, bool flip=false)'],['../structdoctest_1_1_is_na_n.html#a47f3957c504f7d8bc40dd4014cce5ee1',1,'doctest::IsNaN::IsNaN(F f, bool flip=false)']]]
 ];
