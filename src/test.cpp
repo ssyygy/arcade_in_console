@@ -9,7 +9,6 @@
 #include "game_utils.h"
 #include "players.h"
 
-
 TEST_CASE("Enemy creation and basic properties") {
     Enemy e(10, 5);
     CHECK(e.getX() == 10);
