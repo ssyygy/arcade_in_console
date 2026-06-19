@@ -9,8 +9,6 @@
 #include "game_utils.h"
 #include "players.h"
 
-// GameOver, check_collision, spawn_enemy, move_enemies — берутся из game.cpp
-// через game.h, дублирование не нужно
 
 TEST_CASE("Enemy creation and basic properties") {
     Enemy e(10, 5);
