@@ -1,5 +1,6 @@
 #pragma once
 #include <stdexcept>
+#include <string>
 #include <vector>
 
 #include "bullets.h"
@@ -29,36 +30,33 @@ struct LevelConfig {
 extern const LevelConfig LEVELS[];
 
 /**
- * @brief Исключение, генерируемое при проигрыше
+ * @brief Случайно сдвинуть объект на один шаг вниз (влево/вправо/прямо)
  *
- * Бросается вместо exit() при любом условии поражения:
- * столкновении с врагом или боссом, либо когда враг пролетает мимо.
+ * Общая логика движения, используемая и для обычных врагов, и для босса:
+ * с вероятностью 1/5 сдвиг влево, 1/5 — вправо, иначе прямо вниз.
+ * Сдвиг по X ограничен границами поля.
+ * @param x Координата X (изменяется)
+ * @param y Координата Y (изменяется, всегда увеличивается на 1)
+ * @return true, если после движения объект достиг нижнего края поля
  */
-class GameOver : public std::runtime_error {
-   public:
-    /**
-     * @brief Конструктор
-     * @param reason Причина проигрыша (выводится игроку)
-     */
-    explicit GameOver(const std::string& reason) : std::runtime_error(reason) {}
-};
+bool step_down(int& x, int& y);
 
 /**
  * @brief Проверить столкновение корабля с врагами
  * @param spaceship Корабль игрока
  * @param enemies Список врагов
- * @throws GameOver Если корабль столкнулся с живым врагом
+ * @return true, если корабль столкнулся с живым врагом (игра окончена)
  */
-void check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies);
+bool check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies);
 
 /**
  * @brief Проверить столкновение корабля с боссом
  * @param spaceship Корабль игрока
  * @param boss Объект босса
  * @param bossActive true, если босс сейчас активен на поле
- * @throws GameOver Если корабль столкнулся с боссом
+ * @return true, если корабль столкнулся с боссом (игра окончена)
  */
-void check_boss_collision(Spaceship& spaceship, Boss& boss, bool bossActive);
+bool check_boss_collision(Spaceship& spaceship, Boss& boss, bool bossActive);
 
 /**
  * @brief Создать нового врага в случайной позиции в верхней части поля
@@ -73,24 +71,21 @@ void spawn_enemy(std::vector<Enemy>& enemies, int level);
  * @param enemies Список врагов
  * @param turn Номер текущего хода (движение происходит раз в 3 хода)
  * @param level Текущий уровень сложности
- * @throws GameOver Если враг вышел за нижний край поля
+ * @return true, если враг вышел за нижний край поля (игра окончена)
  */
-void move_enemies(std::vector<Enemy>& enemies, int turn, int level);
+bool move_enemies(std::vector<Enemy>& enemies, int turn, int level);
 
 /**
  * @brief Переместить босса на один шаг вниз
  * @param boss Объект босса
  * @param turn Номер текущего хода (движение происходит раз в 3 хода)
  * @param level Текущий уровень сложности
- * @throws GameOver Если босс вышел за нижний край поля
+ * @return true, если босс вышел за нижний край поля (игра окончена)
  */
-void move_boss(Boss& boss, int turn, int level);
+bool move_boss(Boss& boss, int turn, int level);
 
 /**
  * @brief Отрисовать текущее состояние игрового поля в консоль
- *
- * HUD занимает две строки: уровень и счёт; прогресс до босса или HP босса
- * с текстовой полоской.
  * @param bullets Вектор пуль игрока
  * @param enemies Вектор врагов
  * @param spaceship Корабль игрока
@@ -109,3 +104,9 @@ void draw_field(std::vector<Bullet>& bullets, std::vector<Enemy>& enemies, Space
  * @param score Текущий счёт игрока
  */
 void show_level_screen(int level, int score);
+
+/**
+ * @brief Показать экран проигрыша с причиной
+ * @param reason Текст причины проигрыша
+ */
+void show_game_over_screen(const std::string& reason);

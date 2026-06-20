@@ -128,8 +128,8 @@ TEST_CASE("Bullet kill_enemy does not hit inactive boss") {
 
 TEST_CASE("Spaceship creation at center") {
     Spaceship s;
-    CHECK(s.getX() == 19);
-    CHECK(s.getY() == 37);
+    CHECK(s.getX() == 17);
+    CHECK(s.getY() == 31);
 }
 
 TEST_CASE("Spaceship move left") {
@@ -157,9 +157,9 @@ TEST_CASE("Spaceship left boundary") {
 TEST_CASE("Spaceship right boundary") {
     Spaceship s;
     for (int i = 0; i < 25; i++) s.move('d');
-    CHECK(s.getX() == 39);
+    CHECK(s.getX() == 33);
     s.move('d');
-    CHECK(s.getX() == 39);
+    CHECK(s.getX() == 33);
 }
 
 TEST_CASE("Random number in range") {
@@ -182,14 +182,14 @@ TEST_CASE("check_collision no collision") {
     Spaceship s;
     std::vector<Enemy> enemies;
     enemies.emplace_back(5, 5);
-    CHECK_NOTHROW(check_collision(s, enemies));
+    CHECK(check_collision(s, enemies) == false);
 }
 
-TEST_CASE("check_collision throws on hit") {
+TEST_CASE("check_collision returns true on hit") {
     Spaceship s;
     std::vector<Enemy> enemies;
     enemies.emplace_back(s.getX(), s.getY());
-    CHECK_THROWS_AS(check_collision(s, enemies), GameOver);
+    CHECK(check_collision(s, enemies) == true);
 }
 
 TEST_CASE("check_collision dead enemy does not trigger") {
@@ -197,7 +197,7 @@ TEST_CASE("check_collision dead enemy does not trigger") {
     std::vector<Enemy> enemies;
     enemies.emplace_back(s.getX(), s.getY());
     enemies[0].kill_enemy();
-    CHECK_NOTHROW(check_collision(s, enemies));
+    CHECK(check_collision(s, enemies) == false);
 }
 
 TEST_CASE("spawn_enemy adds enemy to list") {
@@ -228,15 +228,15 @@ TEST_CASE("move_enemies does not move on other turns") {
     CHECK(enemies[0].getY() == startY);
 }
 
-TEST_CASE("move_enemies throws when enemy reaches bottom") {
+TEST_CASE("move_enemies returns true when enemy reaches bottom") {
     std::vector<Enemy> enemies;
     enemies.emplace_back(10, 39);
-    CHECK_THROWS_AS(move_enemies(enemies, 0, 1), GameOver);
+    CHECK(move_enemies(enemies, 0, 1) == true);
 }
 
 TEST_CASE("move_enemies skips dead enemies") {
     std::vector<Enemy> enemies;
     enemies.emplace_back(10, 39);
     enemies[0].kill_enemy();
-    CHECK_NOTHROW(move_enemies(enemies, 0, 1));
+    CHECK(move_enemies(enemies, 0, 1) == false);
 }

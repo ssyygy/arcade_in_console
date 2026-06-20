@@ -17,10 +17,12 @@ int main() {
 
         int score = 0;
         int currentLevel = 1;
+        bool gameOver = false;
+        std::string gameOverReason;
 
         show_level_screen(currentLevel, score);
 
-        while (currentLevel <= MAX_LEVEL) {
+        while (currentLevel <= MAX_LEVEL && !gameOver) {
             const LevelConfig& cfg = LEVELS[currentLevel - 1];
 
             int totalKills = 0;
@@ -40,8 +42,9 @@ int main() {
                        currentLevel);
 
             auto last_update = std::chrono::steady_clock::now();
+            bool levelCleared = false;
 
-            while (true) {
+            while (!gameOver && !levelCleared) {
                 char command = getch_nonblock();
 
                 if (command == 'a' || command == 'A' || command == 'd' || command == 'D') {
@@ -57,7 +60,6 @@ int main() {
                 if (std::chrono::duration_cast<std::chrono::milliseconds>(now - last_update)
                         .count() >= 150) {
                     for (auto& bullet : bullets) {
-                        // считаю живых до и после выстрела, чтобы засчитать kill
                         int liveBefore = 0;
                         for (const auto& e : enemies) {
                             if (e.state()) liveBefore++;
@@ -74,7 +76,7 @@ int main() {
 
                         bullet.move();
                     }
-                    // erase-remove idiom: удаляю неактивные пули из вектора
+
                     bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
                                                  [](Bullet& b) { return !b.isActiveStatus(); }),
                                   bullets.end());
@@ -84,7 +86,8 @@ int main() {
                         bossActive = false;
                         score += currentLevel * 10;
                         currentLevel++;
-                        break;
+                        levelCleared = true;
+                        continue;
                     }
 
                     int liveEnemies = 0;
@@ -97,8 +100,17 @@ int main() {
                         spawn_enemy(enemies, currentLevel);
                     }
 
-                    move_enemies(enemies, turn, currentLevel);
-                    check_collision(spaceship, enemies);
+                    if (move_enemies(enemies, turn, currentLevel)) {
+                        gameOver = true;
+                        gameOverReason = "Ha-ha, you lost! The enemy flew into you!";
+                        continue;
+                    }
+
+                    if (check_collision(spaceship, enemies)) {
+                        gameOver = true;
+                        gameOverReason = "Ha-ha, you lost! The enemy flew into you!";
+                        continue;
+                    }
 
                     if (!bossDefeated && !bossActive && totalKills >= cfg.kills_to_boss) {
                         bossActive = true;
@@ -108,8 +120,16 @@ int main() {
                     }
 
                     if (bossActive && boss.state()) {
-                        move_boss(boss, turn, currentLevel);
-                        check_boss_collision(spaceship, boss, bossActive);
+                        if (move_boss(boss, turn, currentLevel)) {
+                            gameOver = true;
+                            gameOverReason = "Ha-ha, you lost! The BOSS flew past!";
+                            continue;
+                        }
+                        if (check_boss_collision(spaceship, boss, bossActive)) {
+                            gameOver = true;
+                            gameOverReason = "Ha-ha, you lost! The BOSS flew into you!!";
+                            continue;
+                        }
                     }
 
                     draw_field(bullets, enemies, spaceship, score, boss, bossActive, totalKills,
@@ -121,26 +141,25 @@ int main() {
                 std::this_thread::sleep_for(std::chrono::milliseconds(1));
             }
 
-            if (currentLevel <= MAX_LEVEL) {
+            if (!gameOver && currentLevel <= MAX_LEVEL) {
                 show_level_screen(currentLevel, score);
             }
         }
 
-        clear_screen();
-        std::cout << "WIIIIIIIIIN\n";
-        std::cout << "Final score: " << score << "\n";
-        std::this_thread::sleep_for(std::chrono::seconds(3));
+        if (gameOver) {
+            show_game_over_screen(gameOverReason);
+        } else {
+            clear_screen();
+            std::cout << "WIIIIIIIIIN\n";
+            std::cout << "Final score: " << score << "\n";
+            std::this_thread::sleep_for(std::chrono::seconds(3));
+        }
+
         return 0;
 
-    } catch (const GameOver& e) {
-        clear_screen();
-        std::cout << e.what() << "\n";
-        std::this_thread::sleep_for(std::chrono::seconds(2));
-        return 0;
     } catch (const std::exception& e) {
+        clear_screen();
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
     }
-
-    return 0;
 }
