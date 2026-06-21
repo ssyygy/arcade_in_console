@@ -30,7 +30,7 @@ bool step_down(int& x, int& y) {
 bool check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies) {
     for (auto& enemy : enemies) {
         if (enemy.state() && enemy.getX() == spaceship.getX() && enemy.getY() == spaceship.getY()) {
-            return true;  // враг столкнулся с кораблём — игра окончена
+            return true;
         }
     }
     return false;
@@ -39,7 +39,7 @@ bool check_collision(Spaceship& spaceship, std::vector<Enemy>& enemies) {
 bool check_boss_collision(Spaceship& spaceship, Boss& boss, bool bossActive) {
     if (bossActive && boss.state() && boss.getX() == spaceship.getX() &&
         boss.getY() == spaceship.getY()) {
-        return true;  // босс столкнулся с кораблём — игра окончена
+        return true;
     }
     return false;
 }
@@ -52,10 +52,9 @@ void spawn_enemy(std::vector<Enemy>& enemies, int level) {
     int x = generate_random(2, width - 3);
     int y = 1;
 
-    // чтобы враги не спавнились друг на друге
     for (const auto& enemy : enemies) {
         if (enemy.state() && enemy.getX() == x && enemy.getY() == y) {
-            return;  // место занято — просто не спавним в этот раз
+            return; 
         }
     }
 
@@ -75,7 +74,7 @@ bool move_enemies(std::vector<Enemy>& enemies, int turn, int level) {
         enemy.set_position(new_x, new_y);
 
         if (reachedBottom) {
-            return true;  // враг долетел до низа — игра окончена
+            return true;
         }
     }
     return false;
