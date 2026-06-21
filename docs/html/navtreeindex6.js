@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"how__exception__translators__work_8cpp.html#a21b32381cc827d6ac8ceb62635776d86":[2,0,0,0,0,2,1,0,9],
+"how__exception__translators__work_8cpp.html#a28c144632da97bca6f2e2b3e08ec6747":[2,0,0,0,0,2,1,0,4],
 "how__exception__translators__work_8cpp.html#a3742919af8533c8336f97a20cb0bf997":[2,0,0,0,0,2,1,0,5],
 "how__exception__translators__work_8cpp.html#a5eb958c266d751cdf5212dbd72a88118":[2,0,0,0,0,2,1,0,8],
 "how__exception__translators__work_8cpp.html#aa57eb21e46ddbab2ba3943ce35c38890":[2,0,0,0,0,2,1,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92aa3eaac8aa7fd734593ad59d60f723428":[0,0,2,1,1,2],
 "namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92aa3eaac8aa7fd734593ad59d60f723428":[0,0,2,1,1,15],
 "namespacedoctest_1_1_test_case_failure_reason.html":[0,0,2,3],
-"namespacedoctest_1_1_test_case_failure_reason.html#aecb2ca1f80416d60f0d6b96f65859d3c":[0,0,2,3,0],
-"namespacedoctest_1_1_test_case_failure_reason.html#aecb2ca1f80416d60f0d6b96f65859d3c":[0,0,2,3,1],
-"namespacedoctest_1_1_test_case_failure_reason.html#aecb2ca1f80416d60f0d6b96f65859d3ca127f67bd6b608d4ea828d6d390dc8511":[0,0,2,3,0,9]
+"namespacedoctest_1_1_test_case_failure_reason.html#aecb2ca1f80416d60f0d6b96f65859d3c":[0,0,2,3,0]
 };

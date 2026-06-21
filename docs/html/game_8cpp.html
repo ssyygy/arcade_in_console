@@ -92,7 +92,6 @@ $(function(){initNavTree('game_8cpp.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="game_8h_source.html">game.h</a>&quot;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -101,26 +100,30 @@ $(function(){initNavTree('game_8cpp.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4a677831913343d641ed7526cada8dce" id="r_a4a677831913343d641ed7526cada8dce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a677831913343d641ed7526cada8dce">check_collision</a> (<a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies)</td></tr>
-<tr class="memdesc:a4a677831913343d641ed7526cada8dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить столкновение корабля с врагами  <br /></td></tr>
-<tr class="memitem:a8f3f8f1c11c8b4384ddce29400952689" id="r_a8f3f8f1c11c8b4384ddce29400952689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f3f8f1c11c8b4384ddce29400952689">check_boss_collision</a> (<a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, <a class="el" href="class_boss.html">Boss</a> &amp;boss, bool bossActive)</td></tr>
-<tr class="memdesc:a8f3f8f1c11c8b4384ddce29400952689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить столкновение корабля с боссом  <br /></td></tr>
+<tr class="memitem:a7c5cb29f8ecdb0749b66c627cb08e461" id="r_a7c5cb29f8ecdb0749b66c627cb08e461"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c5cb29f8ecdb0749b66c627cb08e461">step_down</a> (int &amp;x, int &amp;y)</td></tr>
+<tr class="memdesc:a7c5cb29f8ecdb0749b66c627cb08e461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Случайно сдвинуть объект на один шаг вниз (влево/вправо/прямо).  <br /></td></tr>
+<tr class="memitem:ab6ade6097033746fda9f66a5c22a75ad" id="r_ab6ade6097033746fda9f66a5c22a75ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ade6097033746fda9f66a5c22a75ad">check_collision</a> (<a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies)</td></tr>
+<tr class="memdesc:ab6ade6097033746fda9f66a5c22a75ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить столкновение корабля с врагами  <br /></td></tr>
+<tr class="memitem:a1a9d6d3771c3698813012173fa142c78" id="r_a1a9d6d3771c3698813012173fa142c78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a9d6d3771c3698813012173fa142c78">check_boss_collision</a> (<a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, <a class="el" href="class_boss.html">Boss</a> &amp;boss, bool bossActive)</td></tr>
+<tr class="memdesc:a1a9d6d3771c3698813012173fa142c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить столкновение корабля с боссом  <br /></td></tr>
 <tr class="memitem:a97452a0f61369588624278cd10828c4b" id="r_a97452a0f61369588624278cd10828c4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97452a0f61369588624278cd10828c4b">spawn_enemy</a> (std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies, int level)</td></tr>
 <tr class="memdesc:a97452a0f61369588624278cd10828c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать нового врага в случайной позиции в верхней части поля  <br /></td></tr>
-<tr class="memitem:a8855d647dcca0ca42ca7a0ec7f18f897" id="r_a8855d647dcca0ca42ca7a0ec7f18f897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8855d647dcca0ca42ca7a0ec7f18f897">move_enemies</a> (std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies, int turn, int level)</td></tr>
-<tr class="memdesc:a8855d647dcca0ca42ca7a0ec7f18f897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переместить всех живых врагов на один шаг вниз  <br /></td></tr>
-<tr class="memitem:a7e4a998dc9753593831e5e036aa4a6fc" id="r_a7e4a998dc9753593831e5e036aa4a6fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e4a998dc9753593831e5e036aa4a6fc">move_boss</a> (<a class="el" href="class_boss.html">Boss</a> &amp;boss, int turn, int level)</td></tr>
-<tr class="memdesc:a7e4a998dc9753593831e5e036aa4a6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переместить босса на один шаг вниз  <br /></td></tr>
+<tr class="memitem:ac12419774f475b403a9a855b87f9938c" id="r_ac12419774f475b403a9a855b87f9938c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac12419774f475b403a9a855b87f9938c">move_enemies</a> (std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies, int turn, int level)</td></tr>
+<tr class="memdesc:ac12419774f475b403a9a855b87f9938c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переместить всех живых врагов на один шаг вниз  <br /></td></tr>
+<tr class="memitem:afb46793775ba020d33589748c1d4c688" id="r_afb46793775ba020d33589748c1d4c688"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb46793775ba020d33589748c1d4c688">move_boss</a> (<a class="el" href="class_boss.html">Boss</a> &amp;boss, int turn, int level)</td></tr>
+<tr class="memdesc:afb46793775ba020d33589748c1d4c688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переместить босса на один шаг вниз  <br /></td></tr>
 <tr class="memitem:a013642573e76ef6d17fa60efb5ee83a1" id="r_a013642573e76ef6d17fa60efb5ee83a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a013642573e76ef6d17fa60efb5ee83a1">draw_field</a> (std::vector&lt; <a class="el" href="class_bullet.html">Bullet</a> &gt; &amp;bullets, std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies, <a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, int score, <a class="el" href="class_boss.html">Boss</a> &amp;boss, bool bossActive, int totalKills, int currentLevel)</td></tr>
 <tr class="memdesc:a013642573e76ef6d17fa60efb5ee83a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовать текущее состояние игрового поля в консоль  <br /></td></tr>
 <tr class="memitem:ae48e4f1c348562579b9411760ec0bdef" id="r_ae48e4f1c348562579b9411760ec0bdef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48e4f1c348562579b9411760ec0bdef">show_level_screen</a> (int level, int score)</td></tr>
 <tr class="memdesc:ae48e4f1c348562579b9411760ec0bdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показать экран перехода между уровнями  <br /></td></tr>
+<tr class="memitem:af10751fa450f1550b88d4144e4775c31" id="r_af10751fa450f1550b88d4144e4775c31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10751fa450f1550b88d4144e4775c31">show_game_over_screen</a> (const std::string &amp;reason)</td></tr>
+<tr class="memdesc:af10751fa450f1550b88d4144e4775c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показать экран проигрыша с причиной  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a837aabdd54757cb86d0f66387511753f" id="r_a837aabdd54757cb86d0f66387511753f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a837aabdd54757cb86d0f66387511753f">width</a> = 41</td></tr>
+<tr class="memitem:a837aabdd54757cb86d0f66387511753f" id="r_a837aabdd54757cb86d0f66387511753f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a837aabdd54757cb86d0f66387511753f">width</a> = 35</td></tr>
 <tr class="memdesc:a837aabdd54757cb86d0f66387511753f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ширина игрового поля (включая границы).  <br /></td></tr>
-<tr class="memitem:ad13e9131f5062934438fa82334e4b2ee" id="r_ad13e9131f5062934438fa82334e4b2ee"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad13e9131f5062934438fa82334e4b2ee">height</a> = 41</td></tr>
+<tr class="memitem:ad13e9131f5062934438fa82334e4b2ee" id="r_ad13e9131f5062934438fa82334e4b2ee"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad13e9131f5062934438fa82334e4b2ee">height</a> = 35</td></tr>
 <tr class="memdesc:ad13e9131f5062934438fa82334e4b2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Высота игрового поля (включая границы).  <br /></td></tr>
 <tr class="memitem:a168cd6421746814b8e978c6e22901a51" id="r_a168cd6421746814b8e978c6e22901a51"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a168cd6421746814b8e978c6e22901a51">MAX_LEVEL</a> = 5</td></tr>
 <tr class="memdesc:a168cd6421746814b8e978c6e22901a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество уровней в игре  <br /></td></tr>
@@ -128,14 +131,14 @@ Variables</h2></td></tr>
 <tr class="memdesc:a2f9352199227bf7daf86709f0e9eb401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конфигурации всех уровней  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a8f3f8f1c11c8b4384ddce29400952689" name="a8f3f8f1c11c8b4384ddce29400952689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f3f8f1c11c8b4384ddce29400952689">&#9670;&#160;</a></span>check_boss_collision()</h2>
+<a id="a1a9d6d3771c3698813012173fa142c78" name="a1a9d6d3771c3698813012173fa142c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9d6d3771c3698813012173fa142c78">&#9670;&#160;</a></span>check_boss_collision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void check_boss_collision </td>
+          <td class="memname">bool check_boss_collision </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_spaceship.html">Spaceship</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>spaceship</em></span>, </td>
         </tr>
@@ -161,23 +164,18 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_game_over.html" title="Исключение, генерируемое при проигрыше">GameOver</a></td><td>Если корабль столкнулся с боссом </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, если корабль столкнулся с боссом (игра окончена) </dd></dl>
 
 </div>
 </div>
-<a id="a4a677831913343d641ed7526cada8dce" name="a4a677831913343d641ed7526cada8dce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a677831913343d641ed7526cada8dce">&#9670;&#160;</a></span>check_collision()</h2>
+<a id="ab6ade6097033746fda9f66a5c22a75ad" name="ab6ade6097033746fda9f66a5c22a75ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ade6097033746fda9f66a5c22a75ad">&#9670;&#160;</a></span>check_collision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void check_collision </td>
+          <td class="memname">bool check_collision </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_spaceship.html">Spaceship</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>spaceship</em></span>, </td>
         </tr>
@@ -197,12 +195,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_game_over.html" title="Исключение, генерируемое при проигрыше">GameOver</a></td><td>Если корабль столкнулся с живым врагом </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, если корабль столкнулся с живым врагом (игра окончена) </dd></dl>
 
 </div>
 </div>
@@ -256,7 +249,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Отрисовать текущее состояние игрового поля в консоль </p>
-<p>HUD занимает две строки: уровень и счёт; прогресс до босса или HP босса с текстовой полоской. </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bullets</td><td>Вектор пуль игрока </td></tr>
     <tr><td class="paramname">enemies</td><td>Вектор врагов </td></tr>
@@ -272,14 +265,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e4a998dc9753593831e5e036aa4a6fc" name="a7e4a998dc9753593831e5e036aa4a6fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e4a998dc9753593831e5e036aa4a6fc">&#9670;&#160;</a></span>move_boss()</h2>
+<a id="afb46793775ba020d33589748c1d4c688" name="afb46793775ba020d33589748c1d4c688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb46793775ba020d33589748c1d4c688">&#9670;&#160;</a></span>move_boss()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void move_boss </td>
+          <td class="memname">bool move_boss </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_boss.html">Boss</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>boss</em></span>, </td>
         </tr>
@@ -305,23 +298,18 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_game_over.html" title="Исключение, генерируемое при проигрыше">GameOver</a></td><td>Если босс вышел за нижний край поля </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, если босс вышел за нижний край поля (игра окончена) </dd></dl>
 
 </div>
 </div>
-<a id="a8855d647dcca0ca42ca7a0ec7f18f897" name="a8855d647dcca0ca42ca7a0ec7f18f897"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8855d647dcca0ca42ca7a0ec7f18f897">&#9670;&#160;</a></span>move_enemies()</h2>
+<a id="ac12419774f475b403a9a855b87f9938c" name="ac12419774f475b403a9a855b87f9938c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12419774f475b403a9a855b87f9938c">&#9670;&#160;</a></span>move_enemies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void move_enemies </td>
+          <td class="memname">bool move_enemies </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>enemies</em></span>, </td>
         </tr>
@@ -347,9 +335,29 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="class_game_over.html" title="Исключение, генерируемое при проигрыше">GameOver</a></td><td>Если враг вышел за нижний край поля </td></tr>
+<dl class="section return"><dt>Returns</dt><dd>true, если враг вышел за нижний край поля (игра окончена) </dd></dl>
+
+</div>
+</div>
+<a id="af10751fa450f1550b88d4144e4775c31" name="af10751fa450f1550b88d4144e4775c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10751fa450f1550b88d4144e4775c31">&#9670;&#160;</a></span>show_game_over_screen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_game_over_screen </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>reason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Показать экран проигрыша с причиной </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Текст причины проигрыша </td></tr>
   </table>
   </dd>
 </dl>
@@ -422,6 +430,37 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c5cb29f8ecdb0749b66c627cb08e461" name="a7c5cb29f8ecdb0749b66c627cb08e461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c5cb29f8ecdb0749b66c627cb08e461">&#9670;&#160;</a></span>step_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool step_down </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Случайно сдвинуть объект на один шаг вниз (влево/вправо/прямо). </p>
+<p>Общая логика движения, используемая и для обычных врагов, и для босса: с вероятностью 1/5 сдвиг влево, 1/5 — вправо, иначе прямо вниз. Сдвиг по X ограничен границами поля. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Координата X (изменяется) </td></tr>
+    <tr><td class="paramname">y</td><td>Координата Y (изменяется, всегда увеличивается на 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true, если после движения объект достиг нижнего края поля </dd></dl>
+
+</div>
+</div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
 <a id="ad13e9131f5062934438fa82334e4b2ee" name="ad13e9131f5062934438fa82334e4b2ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad13e9131f5062934438fa82334e4b2ee">&#9670;&#160;</a></span>height</h2>
@@ -430,7 +469,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int height = 41</td>
+          <td class="memname">const int height = 35</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -481,7 +520,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int width = 41</td>
+          <td class="memname">const int width = 35</td>
         </tr>
       </table>
 </div><div class="memdoc">

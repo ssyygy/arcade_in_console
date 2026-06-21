@@ -108,9 +108,6 @@ var hierarchy =
     [ "doctest::detail::types::remove_reference&lt; T &amp; &gt;", "structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_01_4.html", null ],
     [ "doctest::detail::types::remove_reference&lt; T &amp;&amp; &gt;", "structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_6_01_4.html", null ],
     [ "doctest::detail::Result", "structdoctest_1_1detail_1_1_result.html", null ],
-    [ "std::runtime_error", null, [
-      [ "GameOver", "class_game_over.html", null ]
-    ] ],
     [ "S", "struct_s.html", null ],
     [ "doctest::detail::should_stringify_as_underlying_type&lt; T &gt;", "structdoctest_1_1detail_1_1should__stringify__as__underlying__type.html", null ],
     [ "SomeFixture", "struct_some_fixture.html", null ],

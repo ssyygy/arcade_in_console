@@ -122,7 +122,6 @@ var annotated_dup =
     [ "Boss", "class_boss.html", "class_boss" ],
     [ "Bullet", "class_bullet.html", "class_bullet" ],
     [ "Enemy", "class_enemy.html", "class_enemy" ],
-    [ "GameOver", "class_game_over.html", "class_game_over" ],
     [ "int_holder", "structint__holder.html", "structint__holder" ],
     [ "int_pointer", "structint__pointer.html", "structint__pointer" ],
     [ "ITranslator", "struct_i_translator.html", "struct_i_translator" ],
