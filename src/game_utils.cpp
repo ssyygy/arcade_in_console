@@ -65,7 +65,6 @@ void setup_console() {
 
     hStdin = GetStdHandle(STD_INPUT_HANDLE);
     GetConsoleMode(hStdin, &oldMode);
-    // отключаю буферизацию строк и эхо, чтобы читать клавиши без Enter
     DWORD newMode = oldMode & ~(ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT | ENABLE_PROCESSED_INPUT);
     SetConsoleMode(hStdin, newMode);
 

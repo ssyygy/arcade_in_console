@@ -28,7 +28,6 @@ void Enemy::set_position(int new_x, int new_y) {
 
 void Enemy::move_ememy(int turn, int level) {
     if (turn % 3 == 0 && isLive) {
-        // way==1 — вправо, way==5 — влево, остальное — прямо вниз
         int way = generate_random(1, 5);
         if (way == 1) {
             x++;
