@@ -1,4 +1,5 @@
 #pragma once
+#include <stdexcept>
 #include <vector>
 
 /**
@@ -79,6 +80,7 @@ class Boss : public Enemy {
      * @param x_ Координата X
      * @param y_ Координата Y
      * @param hp Начальное здоровье (по умолчанию 5)
+     * @throws std::invalid_argument Если hp <= 0
      */
     Boss(int x_, int y_, int hp = 5);
 

@@ -15,6 +15,13 @@ const LevelConfig LEVELS[MAX_LEVEL] = {
     {5, 3, 8, 3}, {8, 5, 6, 5}, {10, 7, 5, 7}, {12, 9, 4, 9}, {15, 12, 3, 12},
 };
 
+const LevelConfig& get_level_config(int currentLevel) {
+    if (currentLevel < 1 || currentLevel > MAX_LEVEL) {
+        throw std::out_of_range("currentLevel is out of range [1, MAX_LEVEL]");
+    }
+    return LEVELS[currentLevel - 1];
+}
+
 bool step_down(int& x, int& y) {
     y++;
 
@@ -54,7 +61,7 @@ void spawn_enemy(std::vector<Enemy>& enemies, int level) {
 
     for (const auto& enemy : enemies) {
         if (enemy.state() && enemy.getX() == x && enemy.getY() == y) {
-            return; 
+            return;
         }
     }
 
@@ -99,7 +106,7 @@ void draw_field(std::vector<Bullet>& bullets, std::vector<Enemy>& enemies, Space
     std::string frame;
     frame.reserve(width * height * 4);
 
-    const LevelConfig& cfg = LEVELS[currentLevel - 1];
+    const LevelConfig& cfg = get_level_config(currentLevel);
 
     frame += "Level: ";
     frame += std::to_string(currentLevel);

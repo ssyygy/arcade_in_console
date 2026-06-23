@@ -57,6 +57,16 @@ TEST_CASE("Boss take damage until death") {
     CHECK(b.GetHP() == 0);
 }
 
+TEST_CASE("Boss creation with custom positive hp") {
+    Boss b(20, 5, 10);
+    CHECK(b.GetHP() == 10);
+}
+
+TEST_CASE("Boss creation with zero or negative hp throws") {
+    CHECK_THROWS_AS(Boss(20, 5, 0), std::invalid_argument);
+    CHECK_THROWS_AS(Boss(20, 5, -3), std::invalid_argument);
+}
+
 TEST_CASE("Bullet lifecycle") {
     Bullet bullet;
     CHECK(bullet.isActiveStatus() == false);
@@ -210,6 +220,19 @@ TEST_CASE("spawn_enemy invalid level throws") {
     std::vector<Enemy> enemies;
     CHECK_THROWS_AS(spawn_enemy(enemies, 0), std::invalid_argument);
     CHECK_THROWS_AS(spawn_enemy(enemies, -1), std::invalid_argument);
+}
+
+TEST_CASE("get_level_config returns correct config for valid level") {
+    const LevelConfig& cfg = get_level_config(1);
+    CHECK(cfg.kills_to_boss == 5);
+    CHECK(cfg.max_enemies == 3);
+    CHECK(cfg.spawn_every == 8);
+    CHECK(cfg.boss_hp == 3);
+}
+
+TEST_CASE("get_level_config out of range throws") {
+    CHECK_THROWS_AS(get_level_config(0), std::out_of_range);
+    CHECK_THROWS_AS(get_level_config(MAX_LEVEL + 1), std::out_of_range);
 }
 
 TEST_CASE("move_enemies moves on turn divisible by 3") {

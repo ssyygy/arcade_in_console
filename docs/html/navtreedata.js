@@ -70,13 +70,13 @@ var NAVTREEINDEX =
 "doctest_2doctest_8h.html#abeeedde24675295715ea07fa2f9ed875",
 "doctest__fwd_8h.html#a6d6b09ad857bf02d03049faf3235ed55",
 "doctest__proxy_8h.html#a2e4d064c31f7fe96ef0ac8ab3583c53c",
-"how__exception__translators__work_8cpp.html#a21b32381cc827d6ac8ceb62635776d86",
-"namespacedoctest_1_1_test_case_failure_reason.html#aecb2ca1f80416d60f0d6b96f65859d3c",
+"how__exception__translators__work_8cpp.html#a08790d7e6b33c7c7e472f94ba7e619f8",
+"namespacedoctest_1_1_test_case_failure_reason.html",
 "namespacedoctest_1_1assert_type.html#ae1bb5bed722f34f1c38b83cb19d326d3aec7ed8c2634a131911ac952cd5b4c95d",
-"struct_i_translator.html",
-"structdoctest_1_1_i_context_scope.html",
-"structdoctest_1_1detail_1_1_expression_decomposer.html#a95b4beb484e659a3d7afb5ba1b263bee",
-"structdoctest_1_1detail_1_1has__insertion__operator.html"
+"struct_bar_1_1_my_other_type.html",
+"structdoctest_1_1_current_test_case_stats.html#a2fb52eed7bcef7322a816f418f0fb942",
+"structdoctest_1_1detail_1_1_expression_decomposer.html#a6bf2c46ebf0dc68106be801a90776e65",
+"structdoctest_1_1detail_1_1filldata_3_01_t_0f_n_0e_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

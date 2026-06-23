@@ -23,7 +23,7 @@ int main() {
         show_level_screen(currentLevel, score);
 
         while (currentLevel <= MAX_LEVEL && !gameOver) {
-            const LevelConfig& cfg = LEVELS[currentLevel - 1];
+            const LevelConfig& cfg = get_level_config(currentLevel);
 
             int totalKills = 0;
             int turn = 0;

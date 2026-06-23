@@ -4,6 +4,7 @@ var game_8h =
     [ "check_boss_collision", "game_8h.html#a1a9d6d3771c3698813012173fa142c78", null ],
     [ "check_collision", "game_8h.html#ab6ade6097033746fda9f66a5c22a75ad", null ],
     [ "draw_field", "game_8h.html#a013642573e76ef6d17fa60efb5ee83a1", null ],
+    [ "get_level_config", "game_8h.html#a27aba90ef7aeddf4293233a52c07b292", null ],
     [ "move_boss", "game_8h.html#afb46793775ba020d33589748c1d4c688", null ],
     [ "move_enemies", "game_8h.html#ac12419774f475b403a9a855b87f9938c", null ],
     [ "show_game_over_screen", "game_8h.html#af10751fa450f1550b88d4144e4775c31", null ],

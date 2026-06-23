@@ -2,6 +2,8 @@ var src_2test_8cpp =
 [
     [ "DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN", "src_2test_8cpp.html#a623b8690a262536536a43eab2d7df03d", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a800c5631d5940c5822bfbe231a11abc9", null ],
+    [ "TEST_CASE", "src_2test_8cpp.html#a1b9560cf0974db496eec47d1a0c74a52", null ],
+    [ "TEST_CASE", "src_2test_8cpp.html#a889858bda4236f303994b8cc13bf8059", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#aeced1c32a598d92a5cfa399c1b19309d", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a40e2e5151534778523081982e0894a37", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a41df3cfa3058f446d69bc9f71c6b310c", null ],
@@ -16,6 +18,8 @@ var src_2test_8cpp =
     [ "TEST_CASE", "src_2test_8cpp.html#ac86e410a6d6cbdba91c84451bcc8df1c", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a9bb47b8ca7c6a5aa5c7d65a8515654a2", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#ad0746691ef073edb602318c38e74ca4c", null ],
+    [ "TEST_CASE", "src_2test_8cpp.html#a4de4038e21e6d5605fa325dce25b0995", null ],
+    [ "TEST_CASE", "src_2test_8cpp.html#a3b1156b42ea53e18662773f11d7f53b2", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a843070286d4016c9c92b4adbbc3131ce", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#af66fd16b57ad6dc62afe7d9d14c48ac4", null ],
     [ "TEST_CASE", "src_2test_8cpp.html#a248fb31766c10bc7605b9ab3466e8999", null ],

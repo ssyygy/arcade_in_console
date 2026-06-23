@@ -56,7 +56,11 @@ void Enemy::show_animation() {
     hasAnimationShown = true;
 }
 
-Boss::Boss(int x_, int y_, int hp) : Enemy(x_, y_), health(hp) {}
+Boss::Boss(int x_, int y_, int hp) : Enemy(x_, y_), health(hp) {
+    if (hp <= 0) {
+        throw std::invalid_argument("Boss HP must be positive");
+    }
+}
 
 void Boss::take_damage() {
     health--;

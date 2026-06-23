@@ -30,6 +30,14 @@ struct LevelConfig {
 extern const LevelConfig LEVELS[];
 
 /**
+ * @brief Получить конфиг уровня с проверкой границ
+ * @param currentLevel Номер уровня (1–MAX_LEVEL)
+ * @return Константная ссылка на конфиг уровня
+ * @throws std::out_of_range Если currentLevel вне диапазона [1, MAX_LEVEL]
+ */
+const LevelConfig& get_level_config(int currentLevel);
+
+/**
  * @brief Случайно сдвинуть объект на один шаг вниз (влево/вправо/прямо)
  *
  * Общая логика движения, используемая и для обычных врагов, и для босса:

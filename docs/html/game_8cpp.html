@@ -100,6 +100,8 @@ $(function(){initNavTree('game_8cpp.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a27aba90ef7aeddf4293233a52c07b292" id="r_a27aba90ef7aeddf4293233a52c07b292"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_level_config.html">LevelConfig</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27aba90ef7aeddf4293233a52c07b292">get_level_config</a> (int currentLevel)</td></tr>
+<tr class="memdesc:a27aba90ef7aeddf4293233a52c07b292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить конфиг уровня с проверкой границ  <br /></td></tr>
 <tr class="memitem:a7c5cb29f8ecdb0749b66c627cb08e461" id="r_a7c5cb29f8ecdb0749b66c627cb08e461"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c5cb29f8ecdb0749b66c627cb08e461">step_down</a> (int &amp;x, int &amp;y)</td></tr>
 <tr class="memdesc:a7c5cb29f8ecdb0749b66c627cb08e461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Случайно сдвинуть объект на один шаг вниз (влево/вправо/прямо).  <br /></td></tr>
 <tr class="memitem:ab6ade6097033746fda9f66a5c22a75ad" id="r_ab6ade6097033746fda9f66a5c22a75ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ade6097033746fda9f66a5c22a75ad">check_collision</a> (<a class="el" href="class_spaceship.html">Spaceship</a> &amp;spaceship, std::vector&lt; <a class="el" href="class_enemy.html">Enemy</a> &gt; &amp;enemies)</td></tr>
@@ -259,6 +261,38 @@ Variables</h2></td></tr>
     <tr><td class="paramname">bossActive</td><td>true, если босс активен и должен быть отображён </td></tr>
     <tr><td class="paramname">totalKills</td><td>Количество уничтоженных врагов на текущем уровне </td></tr>
     <tr><td class="paramname">currentLevel</td><td>Номер текущего уровня (1–MAX_LEVEL) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27aba90ef7aeddf4293233a52c07b292" name="a27aba90ef7aeddf4293233a52c07b292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27aba90ef7aeddf4293233a52c07b292">&#9670;&#160;</a></span>get_level_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_level_config.html">LevelConfig</a> &amp; get_level_config </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>currentLevel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получить конфиг уровня с проверкой границ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentLevel</td><td>Номер уровня (1–MAX_LEVEL) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Константная ссылка на конфиг уровня </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>Если currentLevel вне диапазона [1, MAX_LEVEL] </td></tr>
   </table>
   </dd>
 </dl>
